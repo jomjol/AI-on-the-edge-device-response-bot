@@ -30,6 +30,12 @@ jobs:
         cd test
         python test.py
 
+
+    - name: XX
+      run: |
+        pwd
+        ls -l        
+
     - name: Upload Test report
       uses: actions/upload-artifact@v4
       with:
