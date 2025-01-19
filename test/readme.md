@@ -1,12 +1,16 @@
 # Test of the Discussion Bot
+## Automatically
+The Github actions run the test automatically on every commit.
+The results can be found at [https://jomjol.github.io/AI-on-the-edge-device-response-bot](https://jomjol.github.io/AI-on-the-edge-device-response-bot).
 
-## Setup
+## Manually
+### Setup
 Only needed to run the tests:
 ```bash
 pip install -r requirements.txt
 ```
 
-## Test Data
+### Test Data
 The `discussions.json.tar.gz` file contains a list of discussion threads (first comment only).
 The list got generated with the following cmd:
 ```bash
@@ -17,5 +21,5 @@ Afterward I removed the first and last line of each file (remove the `[` and `]`
 
 The `discussions.json.tar.gz` file gets extracted to `discussions.json` if it does not exist yet.
 
-## Run Tests
+### Run Tests
 If you run the `test.py` script it will generate a HTML page which shows all discussions and the matching responses.
