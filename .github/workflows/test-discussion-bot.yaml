@@ -31,15 +31,9 @@ jobs:
         python test.py
         mkdir ../report
         mv result.html ../report/index.html
-        cd ..
 
     - name: Setup Pages
       uses: actions/configure-pages@v4
-
-    - name: xx
-      run: |
-        pwd
-        ls -l
         
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v2
