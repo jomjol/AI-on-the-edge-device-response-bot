@@ -30,17 +30,18 @@ jobs:
         cd test
         python test.py
 
-
     - name: XX
       run: |
         pwd
-        ls -l        
+        ls -l
+        cd test
+        ls -l
 
     - name: Upload Test report
       uses: actions/upload-artifact@v4
       with:
         name: "Response-Bot_test-report"
-        path: result.html
+        path: test/result.html
 
     - name: Setup Pages
       uses: actions/configure-pages@v4
