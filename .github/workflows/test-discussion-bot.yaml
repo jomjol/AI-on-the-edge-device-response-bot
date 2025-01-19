@@ -11,6 +11,8 @@ permissions:
   issues: write
   pull-requests: write
   discussions: write
+  pages: write
+  id-token: write
 
 jobs:
   bot-test:
@@ -34,20 +36,6 @@ jobs:
         name: "Response-Bot_test-report"
         path: ./test/result.html
 
-  update-pages:
-    needs: [bot-test]
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-
-    # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-
-    steps:
     - name: Setup Pages
       uses: actions/configure-pages@v4
       
