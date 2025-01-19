@@ -32,12 +32,6 @@ jobs:
         mv result.html ../index.html
         cd ..
 
-    - name: Upload Test report
-      uses: actions/upload-artifact@v4
-      with:
-        name: "Response-Bot_test-report"
-        path: index.html
-
     - name: Setup Pages
       uses: actions/configure-pages@v4
 
@@ -49,7 +43,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v2
       with:
-        path: 'index.html'
+        path: index.html
 
     - name: Deploy to GitHub Pages
       id: deployment
