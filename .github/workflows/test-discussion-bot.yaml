@@ -42,7 +42,7 @@ jobs:
       uses: actions/configure-pages@v4
 
     - name: xx
-      run:
+      run: |
         pwd
         ls -l
         
