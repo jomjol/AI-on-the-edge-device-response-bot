@@ -30,6 +30,7 @@ jobs:
         cd test
         python test.py
         mv result.html ../index.html
+        cd ..
 
     - name: Upload Test report
       uses: actions/upload-artifact@v4
