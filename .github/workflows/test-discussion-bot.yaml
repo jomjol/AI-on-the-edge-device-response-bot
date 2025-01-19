@@ -50,7 +50,14 @@ jobs:
     steps:
     - name: Setup Pages
       uses: actions/configure-pages@v4
-
+      
+    - name: XXX
+      run: |
+        pwd
+        ls -l
+        cd tests
+        ls -l
+        
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v2
       with:
